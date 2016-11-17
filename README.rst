@@ -1,8 +1,7 @@
-============
+================================
 xart:  generate art ascii texts.
-============
+================================
 
-==================
 
 .. code-block:: bash
 
@@ -22,7 +21,9 @@ xart:  generate art ascii texts.
 
 
 Installation
------
+------------
+
+repo address: `xart`_
 
 ``xart`` has uploaded to `pypi`_, so you can just type ``pip install xart`` to install.
 
@@ -36,7 +37,7 @@ Or:
 
 
 License
-----------
+-------
 
 DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 Version 2, December 2004
@@ -53,4 +54,5 @@ TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 0. You just DO WHAT THE FUCK YOU WANT TO.
 
 
+.. _xart: https://github.com/xlzd/xart
 .. _pypi: https://pypi.python.org/pypi/xart
