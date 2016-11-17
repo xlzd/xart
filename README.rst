@@ -3,6 +3,7 @@ xart:  generate art ascii texts.
 ==================
 
 .. code-block:: bash
+
                    ,--,
                  ,--.'|                        ,---,
                  |  | :           ,----,     ,---.'|
