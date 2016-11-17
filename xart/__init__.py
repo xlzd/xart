@@ -12,7 +12,7 @@ import errors
 from font import Font
 from renderer import Renderer
 
-__version__ = '0.1.1'
+__version__ = '0.1.4'
 
 
 def _print_version():
@@ -21,7 +21,7 @@ def _print_version():
 
 
 def _print_all_fonts():
-    sys.stdout.write('xart : generate art ascii fonts.\n\n')
+    sys.stdout.write('xart : generate art ascii texts.\n\n')
     fonts = Font.get_all_fonts()
     for idx, font_name in enumerate(fonts):
         sys.stdout.write('  {}. {}\n'.format(idx, font_name))
@@ -53,7 +53,7 @@ def _render_fonts(text, font=None):
 
 @exception_handler
 def main():
-    parser = argparse.ArgumentParser(description='xart : generate art ascii fonts.')
+    parser = argparse.ArgumentParser(description='xart : generate art ascii texts.')
     parser.add_argument('-f', '--font', default='', help='font to render with, default random', metavar='FONT')
     parser.add_argument('-i', '--info', default=False, help='show information of given font', action='store_true')
     parser.add_argument('-l', '--list', default=False, help='list all supported fonts', action='store_true')
