@@ -3,8 +3,6 @@
 
 from __future__ import unicode_literals
 
-import sys
-
 
 class Renderer(object):
     def __init__(self, font):
@@ -15,5 +13,4 @@ class Renderer(object):
         for ch in text:
             for idx, line in enumerate(self.font.getchar(ch)['char']):
                 data[idx].append(line)
-        sys.stdout.write('\n'.join(''.join(item) for item in data))
-        sys.stdout.write('\n')
+        return '\n'.join(''.join(item) for item in data)
