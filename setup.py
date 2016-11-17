@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# coding: utf8
 
 import sys
 
@@ -10,10 +11,15 @@ VERSION = __version__
 sys.path.pop(0)
 
 
+with open('README.rst') as fp:
+    README = fp.read()
+
+
 setup(
     name='xart',
     version=VERSION,
     description='ASCII text by xlzd',
+    long_description=README,
     license='WTFPL',
     author='xlzd',
     author_email='i@xlzd.me',
