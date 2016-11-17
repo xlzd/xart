@@ -33,7 +33,7 @@ class Font(object):
         for ext in ('.flf', '.tlf'):
             if os.path.exists(path + ext):
                 with open(path + ext, 'r') as fp:
-                    return fp.read().decode('utf-8')
+                    return fp.read().decode('utf-8', 'ignore')
         raise errors.FontNotExist('Font <{}> not found'.format(self._font_name))
 
     def _parse_header(self, header):
@@ -74,9 +74,9 @@ class Font(object):
             hex_match = re.search('^0x', i, re.IGNORECASE)
             if hex_match is not None:
                 i = int(i, 16)
-                width, letter = self._build_char(data)
-                if ''.join(letter) != '':
-                    self._data[i] = {'char': letter, 'width': width}
+                char, width = self._build_char(data)
+                if ''.join(char) != '':
+                    self._data[i] = {'char': char, 'width': width}
 
     @property
     def info(self):
