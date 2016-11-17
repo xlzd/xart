@@ -17,4 +17,4 @@ class Renderer(object):
         for ch in text:
             for idx, line in enumerate(self.font.getchar(ch)['char']):
                 data[idx].append(line)
-        return '\n'.join(''.join(item) for item in data)
+        return '\n'.join(''.join(item) for item in data) + '\n'
