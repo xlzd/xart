@@ -22,12 +22,19 @@ class Font(object):
         self._hard_blank = None
         self.init()
 
+    @classmethod
+    def get_all_fonts(cls):
+        path = os.path.join(os.path.dirname(__file__), 'fonts')
+        return [font.rsplit('.', 1)[0] for font in os.listdir(path)]
+
     def _load_raw_data(self):
         path = os.path.join(os.path.dirname(__file__), 'fonts', self._font_name)
-        if not os.path.exists(path):
-            raise errors.FontNotExist('Font <{}> not found'.format(self._font_name))
-        with open(path, 'r') as fp:
-            return fp.read().decode('utf-8')
+
+        for ext in ('.flf', '.tlf'):
+            if os.path.exists(path + ext):
+                with open(path + ext, 'r') as fp:
+                    return fp.read().decode('utf-8')
+        raise errors.FontNotExist('Font <{}> not found'.format(self._font_name))
 
     def _parse_header(self, header):
         if self.HEADER_PATTERN.search(header) is None:
