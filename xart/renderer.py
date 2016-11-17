@@ -3,8 +3,12 @@
 
 from __future__ import unicode_literals
 
+import os
+
 
 class Renderer(object):
+    WIDTH = int(os.popen('stty size', 'r').read().split()[-1])
+
     def __init__(self, font):
         self.font = font
 
