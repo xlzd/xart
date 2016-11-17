@@ -1,21 +1,27 @@
 #!/usr/bin/env python
 
+import sys
+
 from setuptools import setup
+
+sys.path.insert(0, 'xart')
+from xart import __version__
+VERSION = __version__
+sys.path.pop(0)
 
 
 setup(
     name='xart',
-    version='0.0.1',
+    version=VERSION,
     description='ASCII text by xlzd',
     license='WTFPL',
+    author='xlzd',
+    author_email='i@xlzd.me',
     classifiers=[
         'Environment :: Console',
-        'Intended Audience :: Hackers',
         'Programming Language :: Python',
         'Topic :: Text Processing :: Fonts',
     ],
-    author='xlzd',
-    author_email='i@xlzd.me',
     url='https://github.com/xlzd/xart',
     packages=['xart', 'xart.fonts'],
     package_data={'xart.fonts': ['*.flf', '*.flc']},
