@@ -48,3 +48,6 @@ License
    TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
   0. You just DO WHAT THE FUCK YOU WANT TO.
+
+
+.. _money-to-prisoners-api: https://pypi.python.org/pypi/xart
