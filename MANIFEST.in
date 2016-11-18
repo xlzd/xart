@@ -1,3 +1,4 @@
 include xart/fonts/*.flf
 include xart/fonts/*.flc
+include README.md
 include README.rst
