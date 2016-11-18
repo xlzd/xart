@@ -147,4 +147,4 @@ $ pip install xart --upgrade
 ### License
 ---
 
-WTFPL ([here](LICENSE))
+WTFPL ([here](https://github.com/xlzd/xart/blob/master/LICENSE))
