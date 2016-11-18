@@ -18,7 +18,7 @@ with open('README.rst') as fp:
 setup(
     name='xart',
     version=VERSION,
-    description='ASCII text by xlzd',
+    description='generate art ascii texts',
     long_description=README,
     license='WTFPL',
     author='xlzd',
