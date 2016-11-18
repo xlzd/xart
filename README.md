@@ -1,5 +1,5 @@
-# xart:  generate art ascii texts.
----
+# xart:  generate art ascii texts. [![Version][version-badge]][version-link] [![MIT License][license-badge]]
+
 
 `xart` is a pure Python library that provides an easy way to generate art ascii texts. Life is short, be cool.
 
@@ -148,3 +148,8 @@ $ pip install xart --upgrade
 ---
 
 WTFPL ([here](https://github.com/xlzd/xart/blob/master/LICENSE))
+
+
+[version-badge]:   https://img.shields.io/pypi/v/xart.svg?label=version
+[version-link]:    https://pypi.python.org/pypi/xart/
+[license-badge]:   https://img.shields.io/badge/license-WTFPL-007EC7.svg
