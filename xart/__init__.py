@@ -12,7 +12,7 @@ import errors
 from font import Font
 from renderer import Renderer
 
-__version__ = '0.1.5'
+__version__ = '0.1.8'
 
 
 def _print_version():
