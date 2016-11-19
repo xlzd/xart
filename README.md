@@ -71,6 +71,10 @@ $ xart test -f 3D_Diagonal
 
 #### generate ascii text via given color
 
+```
+$ xart -cRED test
+```
+
 ![COLOR][color-demo]
 
 
