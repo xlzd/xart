@@ -10,9 +10,9 @@ from functools import wraps
 
 import errors
 from font import Font
-from renderer import Renderer
+from renderer import Renderer, Color
 
-__version__ = '0.1.8'
+__version__ = '0.2.0'
 
 
 def _print_version():
@@ -40,13 +40,15 @@ def exception_handler(function):
     return _deco
 
 
-def _render_fonts(text, font=None, show=False):
+def _render_fonts(text, font=None, show=False, color='WHITE'):
     if not font:
         font = random.choice(Font.get_all_fonts())
     if not text:
         text = 'xart'
     renderer = Renderer(Font(font))
-    sys.stdout.write(renderer.render(text))
+    data = renderer.render(text)
+
+    sys.stdout.write(Color.dyeing(data, Color.get_color(color)))
     if show:
         sys.stdout.write('Font name : {}\n'.format(font))
 
@@ -55,6 +57,8 @@ def _render_fonts(text, font=None, show=False):
 def main():
     parser = argparse.ArgumentParser(description='xart : generate art ascii texts.')
     parser.add_argument('-f', '--font', default='', help='font to render with, default random', metavar='FONT')
+    parser.add_argument('-c', '--color', default='WHITE', choices=Color.all_colors(), metavar='COLOR',
+                        help='font color, default WHITE, all : {}'.format(', '.join(Color.all_colors())))
     parser.add_argument('-i', '--info', default=False, help='show information of given font', action='store_true')
     parser.add_argument('-s', '--show', default=False, help='show random fonts', action='store_true')
     parser.add_argument('-l', '--list', default=False, help='list all supported fonts', action='store_true')
@@ -68,7 +72,7 @@ def main():
         return _print_all_fonts()
     elif args.info:
         return print(Font(args.font).info)
-    _render_fonts(text, args.font, args.show)
+    _render_fonts(text, args.font, args.show, args.color)
 
 
 if __name__ == '__main__':

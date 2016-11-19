@@ -31,3 +31,7 @@ class FontNotExist(XArtBaseException):
 
 class InvalidFont(XArtBaseException):
     pass
+
+
+class ColorError(XArtBaseException):
+    pass
