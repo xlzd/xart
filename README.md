@@ -1,4 +1,4 @@
-# xart:  generate art ascii texts. [![Version][version-badge]][version-link] ![MIT License][license-badge]
+# xart:  generate art ascii texts. [![Version][version-badge]][version-link] ![WTFPL License][license-badge]
 
 
 `xart` is a pure Python library that provides an easy way to generate art ascii texts. Life is short, be cool.
@@ -19,13 +19,16 @@
 #### help
 ```
 $ xart -h
-usage: xart [-h] [-f FONT] [-i] [-s] [-l] [-v]
+usage: __init__.py [-h] [-f FONT] [-c COLOR] [-i] [-s] [-l] [-v]
 
 xart : generate art ascii texts.
 
 optional arguments:
   -h, --help            show this help message and exit
   -f FONT, --font FONT  font to render with, default random
+  -c COLOR, --color COLOR
+                        font color, default WHITE, all : BLACK, RED, GREEN,
+                        YELLOW, BLUE, PURPLE, CYAN, GRAY, WHITE
   -i, --info            show information of given font
   -s, --show            show random fonts
   -l, --list            list all supported fonts
@@ -36,12 +39,14 @@ optional arguments:
 
 ```
 $ xart test
-.-..-..-. .-..--. .-..-. .-..-..-.
- ~ | | ~  | | ~~  | | ~   ~ | | ~
-   | |    | | _    \|       | |
-   | |    | |`-'     |\     | |
-   | |    | | __   _ | |    | |
-   `-'    `-'`--' `-'`-'    `-'
+    ███        ▄████████    ▄████████     ███
+▀█████████▄   ███    ███   ███    ███ ▀█████████▄
+   ▀███▀▀██   ███    █▀    ███    █▀     ▀███▀▀██
+    ███   ▀  ▄███▄▄▄       ███            ███   ▀
+    ███     ▀▀███▀▀▀     ▀███████████     ███
+    ███       ███    █▄           ███     ███
+    ███       ███    ███    ▄█    ███     ███
+   ▄████▀     ██████████  ▄████████▀     ▄████▀
 ```
 
 #### generate ascii text via given font
@@ -63,6 +68,11 @@ $ xart test -f 3D_Diagonal
    ---`-'    \   \  /    `--'---'      ---`-'
               `----'
 ```
+
+#### generate ascii text via given color
+
+![COLOR][color-demo]
+
 
 #### show all supported fonts
 
@@ -102,13 +112,12 @@ $    - the "hardblank" -- prints as a blank, but can't be smushed
 ```
 $ xart -v
 xart : generate art ascii fonts, version 0.1.5.
-  ____           ____       ______
- / __ \         /   /      |  ___(
-( (  ) )       / /) )      | |__
-( (  ) )      /_/( (       |___ \
-( (  ) )          ) )          \ \
-( (__) )  __     ( (   __  _____) )
- \____/  (__)    /__\ (__) )_____/
+  ___      ____       ___
+ / _ \    (___ \     / _ \
+| | | |     __) )   | | | |
+| | | |    / __/    | | | |
+| |_| | _ | |___  _ | |_| |
+ \___/ (_)|_____)(_) \___/
 
 ```
 
@@ -146,3 +155,4 @@ WTFPL ([here](https://github.com/xlzd/xart/blob/master/LICENSE))
 [version-badge]:   https://img.shields.io/pypi/v/xart.svg?label=version
 [version-link]:    https://pypi.python.org/pypi/xart/
 [license-badge]:   https://img.shields.io/badge/license-WTFPL-007EC7.svg
+[color-demo]:   https://raw.githubusercontent.com/xlzd/xart/master/printscreen/color.png
