@@ -19,7 +19,7 @@
 #### help
 ```
 $ xart -h
-usage: __init__.py [-h] [-f FONT] [-c COLOR] [-i] [-s] [-l] [-v]
+usage: __init__.py [-h] [-f FONT] [-c COLOR] [-i] [-s] [-l] [-v] [-o OUTFILE]
 
 xart : generate art ascii texts.
 
@@ -33,6 +33,8 @@ optional arguments:
   -s, --show            show random fonts
   -l, --list            list all supported fonts
   -v, --version         version
+  -o, OUTFILE, --outfile OUTFILE
+                        output the text to a file
 ```
 
 #### generate ascii text via random font

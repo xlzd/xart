@@ -4,6 +4,7 @@
 from __future__ import print_function, unicode_literals
 
 import argparse
+import os
 import random
 import sys
 from functools import wraps
@@ -40,7 +41,7 @@ def exception_handler(function):
     return _deco
 
 
-def _render_fonts(text, font=None, show=False, color='WHITE'):
+def _render_fonts(text, font=None, show=False, color='WHITE', outfile=''):
     if not font:
         font = random.choice(Font.get_all_fonts())
     if not text:
@@ -48,7 +49,11 @@ def _render_fonts(text, font=None, show=False, color='WHITE'):
     renderer = Renderer(Font(font))
     data = renderer.render(text)
 
-    sys.stdout.write(Color.dyeing(data, Color.get_color(color)))
+    if outfile:
+        with open(outfile, 'w') as fp:
+            fp.write(data)
+    else:
+        sys.stdout.write(Color.dyeing(data, Color.get_color(color)))
     if show:
         sys.stdout.write('Font name : {}\n'.format(font))
 
@@ -63,6 +68,7 @@ def main():
     parser.add_argument('-s', '--show', default=False, help='show random fonts', action='store_true')
     parser.add_argument('-l', '--list', default=False, help='list all supported fonts', action='store_true')
     parser.add_argument('-v', '--version', default=False, help='version', action='store_true')
+    parser.add_argument('-o', '--outfile', default='', help='output the text to a file', metavar='OUTFILE')
     args, text = parser.parse_known_args()
     text = ''.join(text)
 
@@ -72,7 +78,7 @@ def main():
         return _print_all_fonts()
     elif args.info:
         return print(Font(args.font).info)
-    _render_fonts(text, args.font, args.show, args.color)
+    _render_fonts(text, args.font, args.show, args.color, args.outfile)
 
 
 if __name__ == '__main__':
