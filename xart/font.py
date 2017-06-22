@@ -6,7 +6,7 @@ from __future__ import unicode_literals
 import os
 import re
 
-import errors
+from xart import errors
 
 
 class Font(object):
@@ -33,7 +33,8 @@ class Font(object):
         for ext in ('.flf', '.tlf'):
             if os.path.exists(path + ext):
                 with open(path + ext, 'r') as fp:
-                    return fp.read().decode('utf-8', 'ignore')
+#                    return fp.read().decode('utf-8', 'ignore')
+                    return fp.read()
         raise errors.FontNotExist('Font <{}> not found'.format(self._font_name))
 
     def _parse_header(self, header):
@@ -47,7 +48,7 @@ class Font(object):
 
     def _build_char(self, data):
         chars = []
-        for pos in xrange(self.height):
+        for pos in range(self.height):
             line = data.pop(0)
             if self._suffix is None:
                 self._suffix = self.END_PATTERN.search(line).group(1)
@@ -59,10 +60,10 @@ class Font(object):
         data = self._load_raw_data().splitlines()
         self._parse_header(data.pop(0))
         self._comment = '\n'.join(data[:self._comment_lines])
-        for _ in xrange(self._comment_lines):
+        for _ in range(self._comment_lines):
             data.pop(0)
 
-        for ch in xrange(32, 127):
+        for ch in range(32, 127):
             chars, width = self._build_char(data)
             self._data[ch] = {'char': chars, 'width': width}
 

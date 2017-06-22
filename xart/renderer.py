@@ -3,7 +3,7 @@
 
 from __future__ import unicode_literals, print_function
 
-from errors import ColorError
+from .errors import ColorError
 
 _FMT = u'\033[0;3{}m{}\033[0m'.format
 
@@ -32,10 +32,10 @@ class Color(object):
 
     @classmethod
     def dyeing(cls, string, color):
-        if not isinstance(string, basestring):
-            raise ValueError('string must be a str or unicode, got %s' % type(string))
-        if isinstance(string, str):
-            string = string.decode('utf-8')
+       # if not isinstance(string, basestring):
+        #    raise ValueError('string must be a str or unicode, got %s' % type(string))
+       # if isinstance(string, str):
+         #   string = string.decode('utf-8')
         return _FMT(color, string)
 
 
@@ -46,7 +46,7 @@ class Renderer(object):
         self.font = font
 
     def render(self, text):
-        data = [[] for _ in xrange(self.font.height)]
+        data = [[] for _ in range(self.font.height)]
         for ch in text:
             for idx, line in enumerate(self.font.getchar(ch)['char']):
                 data[idx].append(line)
