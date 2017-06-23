@@ -35,8 +35,8 @@ class Color(object):
     def dyeing(cls, string, color):
 #        if not isinstance(string,str):
 #            raise ValueError('string must be a str')
-        if isinstance(string, str):
-            string = str(string)
+#        if isinstance(string, str):
+#            string = str(string)
         return _FMT(color, string)
 
 
