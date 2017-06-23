@@ -33,8 +33,8 @@ class Color(object):
 
     @classmethod
     def dyeing(cls, string, color):
-        if not isinstance(string,str):
-            raise ValueError('string must be a str')
+#        if not isinstance(string,str):
+#            raise ValueError('string must be a str')
         if isinstance(string, str):
             string = str(string)
         return _FMT(color, string)
@@ -47,6 +47,7 @@ class Renderer(object):
         self.font = font
 
     def render(self, text):
+        # type: (object) -> object
         data = [[] for _ in range(self.font.height)]
         for ch in text:
             for idx, line in enumerate(self.font.getchar(ch)['char']):
