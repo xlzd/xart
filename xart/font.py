@@ -32,9 +32,9 @@ class Font(object):
 
         for ext in ('.flf', '.tlf'):
             if os.path.exists(path + ext):
-                with open(path + ext, 'r') as fp:
+                with open(path + ext, 'rb') as fp:
 #                    return fp.read().decode('utf-8', 'ignore')
-                    return fp.read()
+                    return fp.read().decode('utf-8','ignore')
         raise errors.FontNotExist('Font <{}> not found'.format(self._font_name))
 
     def _parse_header(self, header):

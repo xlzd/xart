@@ -3,7 +3,8 @@
 
 from __future__ import unicode_literals, print_function
 
-from .errors import ColorError
+from xart.errors import ColorError
+import chardet
 
 _FMT = u'\033[0;3{}m{}\033[0m'.format
 
@@ -32,10 +33,10 @@ class Color(object):
 
     @classmethod
     def dyeing(cls, string, color):
-       # if not isinstance(string, basestring):
-        #    raise ValueError('string must be a str or unicode, got %s' % type(string))
-       # if isinstance(string, str):
-         #   string = string.decode('utf-8')
+        if not isinstance(string,str):
+            raise ValueError('string must be a str')
+        if isinstance(string, str):
+            string = str(string)
         return _FMT(color, string)
 
 
