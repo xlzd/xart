@@ -19,7 +19,7 @@ class XArtBaseException(Exception):
 
     @property
     def msg(self):
-        return self._message
+        return self.message
 
 
 class FontNotExist(XArtBaseException):
