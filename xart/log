@@ -1,0 +1,26 @@
+Traceback (most recent call last):
+  File "__init__.py", line 35, in _deco
+    return function(*args, **kwargs)
+  File "__init__.py", line 74, in main
+    _render_fonts(text, args.font, args.show, args.color)
+  File "__init__.py", line 47, in _render_fonts
+    renderer = Renderer(Font(font))
+  File "/home/animaze/workspace/git-repo/xart/xart/font.py", line 23, in __init__
+    self.init()
+  File "/home/animaze/workspace/git-repo/xart/xart/font.py", line 61, in init
+    self._parse_header(data.pop(0))
+  File "/home/animaze/workspace/git-repo/xart/xart/font.py", line 45, in _parse_header
+    raise errors.InvalidFont('Font <{}> error'.format(self._font_name))
+errors.InvalidFont: <exception str() failed>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "__init__.py", line 78, in <module>
+    main()
+  File "__init__.py", line 37, in _deco
+    sys.stderr.write('xart error: {}\n'.format(err.msg))
+  File "/home/animaze/workspace/git-repo/xart/xart/errors.py", line 22, in msg
+    return self._message
+AttributeError: 'InvalidFont' object has no attribute '_message'
+
