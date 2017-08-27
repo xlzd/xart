@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-# -*- coding=UTF-8 -*-
+# coding=UTF-8
 from __future__ import print_function, unicode_literals
 
 import argparse
@@ -7,9 +7,9 @@ import random
 import sys
 from functools import wraps
 
-from xart import errors
-from xart.font import Font
-from xart.renderer import Renderer, Color
+import errors
+from font import Font
+from renderer import Renderer, Color
 
 __version__ = '0.2.0'
 

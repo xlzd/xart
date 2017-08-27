@@ -1,12 +1,12 @@
 #!/usr/bin/env python
-# -*- coding=UTF-8 -*-
+# coding=UTF-8 
 
 from __future__ import unicode_literals
 
 import os
 import re
 
-from xart import errors
+import errors
 
 
 class Font(object):
