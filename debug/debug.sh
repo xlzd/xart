@@ -2,5 +2,5 @@
 
 for font in `cat font_options.txt`
 do
-	python ../xart/__init__.py -f $font
+	python ../xart/main.py -f $font
 done
