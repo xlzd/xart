@@ -7,7 +7,7 @@ from __future__ import unicode_literals
 class XArtBaseException(Exception):
     def __init__(self, message):
         super(XArtBaseException, self).__init__()
-	self._message = message
+        self._message = message
     def __str__(self):
         return '{0}: message={1}.'.format(self.__class__.__name__, self._message.encode("utf8"))
 
