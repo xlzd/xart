@@ -1,0 +1,171 @@
+xart error: Font <allSlant> not found
+xart error: Font <nker-Toy> not found
+xart error: Font <allCaps> not found
+xart error: Font <rlin1> not found
+xart error: Font <icket> not found
+xart error: Font <sic> not found
+xart error: Font <cimal> not found
+xart error: Font <C3Line> not found
+xart error: Font <ellar> not found
+xart error: Font <ramid> not found
+xart error: Font <anner3-D> not found
+xart error: Font <igfig> not found
+xart error: Font <D_Diagonal> not found
+xart error: Font <talic> not found
+xart error: Font <ybermedium> not found
+xart error: Font <ow> not found
+xart error: Font <tampatello> not found
+xart error: Font <ubular> not found
+xart error: Font <ilDevil> not found
+xart error: Font <tickLetters> not found
+xart error: Font <rawford> not found
+xart error: Font <ulbhead> not found
+xart error: Font <awp> not found
+xart error: Font <ombstone> not found
+xart error: Font <ireFont-k> not found
+xart error: Font <ontrast> not found
+xart error: Font <shebrew210> not found
+xart error: Font <atakana> not found
+xart error: Font <orizontalRight> not found
+xart error: Font <ancyj-Fancy> not found
+xart error: Font <radient> not found
+xart error: Font <eaks> not found
+xart error: Font <icks> not found
+xart error: Font <x5> not found
+xart error: Font <gre> not found
+xart error: Font <enjamin> not found
+xart error: Font <MCRazor> not found
+xart error: Font <ebbles> not found
+xart error: Font <hreePoint> not found
+xart error: Font <lipped> not found
+xart error: Font <erlin2> not found
+xart error: Font <otated> not found
+xart error: Font <yberlarge> not found
+xart error: Font <ftiPiti> not found
+xart error: Font <mallShadow> not found
+xart error: Font <rain> not found
+xart error: Font <hort> not found
+xart error: Font <igital> not found
+usage: __init__.py [-h] [-f FONT] [-c COLOR] [-i] [-s] [-l] [-v]
+__init__.py: error: argument -f/--font: expected one argument
+xart error: Font <top> not found
+xart error: Font <SA_Flag> not found
+xart error: Font <eyboard> not found
+xart error: Font <elief2> not found
+xart error: Font <atorjksCheese> not found
+xart error: Font <otMatrix> not found
+xart error: Font <sometric4> not found
+xart error: Font <CD> not found
+xart error: Font <ipples> not found
+xart error: Font <mpossible> not found
+xart error: Font <MCRazor2> not found
+xart error: Font <ancyj-Underlined> not found
+xart error: Font <aligraphy2> not found
+xart error: Font <hunky> not found
+xart error: Font <igMoney-nw> not found
+xart error: Font <arsity> not found
+xart error: Font <ygnet> not found
+xart error: Font <_Blood> not found
+xart error: Font <trongerThanAll> not found
+xart error: Font <Row> not found
+xart error: Font <ig> not found
+xart error: Font <mallTengwar> not found
+xart error: Font <ursive> not found
+xart error: Font <orizontalLeft> not found
+xart error: Font <SCIINewRoman> not found
+xart error: Font <oman> not found
+xart error: Font <ini> not found
+xart error: Font <lphabet> not found
+xart error: Font <cript> not found
+xart error: Font <traight> not found
+xart error: Font <himsy> not found
+xart error: Font <avy> not found
+xart error: Font <ell> not found
+xart error: Font <raced> not found
+xart error: Font <ancyj> not found
+xart error: Font <ban> not found
+xart error: Font <atwalk> not found
+xart error: Font <icksSlant> not found
+xart error: Font <oft> not found
+xart error: Font <S_BlockLetters> not found
+xart error: Font <mallScript> not found
+xart error: Font <razy> not found
+xart error: Font <est1> not found
+xart error: Font <alvinS> not found
+xart error: Font <engwar> not found
+xart error: Font <tarWars> not found
+xart error: Font <tampate> not found
+xart error: Font <ear> not found
+xart error: Font <owanCap> not found
+xart error: Font <uzzy> not found
+xart error: Font <right> not found
+Traceback (most recent call last):
+  File "../xart/__init__.py", line 78, in <module>
+    main()
+  File "../xart/__init__.py", line 35, in _deco
+    return function(*args, **kwargs)
+  File "../xart/__init__.py", line 74, in main
+    _render_fonts(text, args.font, args.show, args.color)
+  File "../xart/__init__.py", line 50, in _render_fonts
+    sys.stdout.write(Color.dyeing(data, Color.get_color(color)))
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 7-11: ordinal not in range(128)
+Traceback (most recent call last):
+  File "../xart/__init__.py", line 78, in <module>
+    main()
+  File "../xart/__init__.py", line 35, in _deco
+    return function(*args, **kwargs)
+  File "../xart/__init__.py", line 74, in main
+    _render_fonts(text, args.font, args.show, args.color)
+  File "../xart/__init__.py", line 50, in _render_fonts
+    sys.stdout.write(Color.dyeing(data, Color.get_color(color)))
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 7-9: ordinal not in range(128)
+Traceback (most recent call last):
+  File "../xart/__init__.py", line 78, in <module>
+    main()
+  File "../xart/__init__.py", line 35, in _deco
+    return function(*args, **kwargs)
+  File "../xart/__init__.py", line 74, in main
+    _render_fonts(text, args.font, args.show, args.color)
+  File "../xart/__init__.py", line 50, in _render_fonts
+    sys.stdout.write(Color.dyeing(data, Color.get_color(color)))
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 7-9: ordinal not in range(128)
+Traceback (most recent call last):
+  File "../xart/__init__.py", line 78, in <module>
+    main()
+  File "../xart/__init__.py", line 35, in _deco
+    return function(*args, **kwargs)
+  File "../xart/__init__.py", line 74, in main
+    _render_fonts(text, args.font, args.show, args.color)
+  File "../xart/__init__.py", line 50, in _render_fonts
+    sys.stdout.write(Color.dyeing(data, Color.get_color(color)))
+UnicodeEncodeError: 'ascii' codec can't encode character u'\u2584' in position 8: ordinal not in range(128)
+Traceback (most recent call last):
+  File "../xart/__init__.py", line 78, in <module>
+    main()
+  File "../xart/__init__.py", line 35, in _deco
+    return function(*args, **kwargs)
+  File "../xart/__init__.py", line 74, in main
+    _render_fonts(text, args.font, args.show, args.color)
+  File "../xart/__init__.py", line 50, in _render_fonts
+    sys.stdout.write(Color.dyeing(data, Color.get_color(color)))
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 8-11: ordinal not in range(128)
+Traceback (most recent call last):
+  File "../xart/__init__.py", line 78, in <module>
+    main()
+  File "../xart/__init__.py", line 35, in _deco
+    return function(*args, **kwargs)
+  File "../xart/__init__.py", line 74, in main
+    _render_fonts(text, args.font, args.show, args.color)
+  File "../xart/__init__.py", line 50, in _render_fonts
+    sys.stdout.write(Color.dyeing(data, Color.get_color(color)))
+UnicodeEncodeError: 'ascii' codec can't encode character u'\u2584' in position 11: ordinal not in range(128)
+Traceback (most recent call last):
+  File "../xart/__init__.py", line 78, in <module>
+    main()
+  File "../xart/__init__.py", line 35, in _deco
+    return function(*args, **kwargs)
+  File "../xart/__init__.py", line 74, in main
+    _render_fonts(text, args.font, args.show, args.color)
+  File "../xart/__init__.py", line 50, in _render_fonts
+    sys.stdout.write(Color.dyeing(data, Color.get_color(color)))
+UnicodeEncodeError: 'ascii' codec can't encode characters in position 7-9: ordinal not in range(128)
