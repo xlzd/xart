@@ -144,10 +144,10 @@ $ pip install xart
 ```
 
 Alternatively, you can also get the latest source code from [GitHub](https://github.com/xlzd/xart) and install it manually:
-
 ```
 $ git clone git@github.com:xlzd/xart.git
 $ cd xart
+$ git checkout release
 $ python setup.py install
 ```
 
