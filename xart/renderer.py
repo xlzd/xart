@@ -3,7 +3,7 @@
 
 from __future__ import unicode_literals, print_function
 
-from errors import ColorError
+from xart.errors import ColorError
 import chardet
 
 _FMT = u'\033[0;3{}m{}\033[0m'.format

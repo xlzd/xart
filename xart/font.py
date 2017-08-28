@@ -6,7 +6,7 @@ from __future__ import unicode_literals
 import os
 import re
 
-import errors
+from xart import errors
 
 
 class Font(object):

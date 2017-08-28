@@ -7,9 +7,9 @@ import random
 import sys
 from functools import wraps
 
-import errors
-from font import Font
-from renderer import Renderer, Color
+from xart import errors
+from xart.font import Font
+from xart.renderer import Renderer, Color
 
 __version__ = '0.2.0'
 
