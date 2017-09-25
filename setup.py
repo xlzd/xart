@@ -16,13 +16,13 @@ with open('README.rst') as fp:
 
 
 setup(
-    name='xart',
+    name='xart3',
     version=VERSION,
-    description='generate art ascii texts',
+    description='generate art ascii texts, support python3',
     long_description=README,
     license='WTFPL',
-    author='xlzd',
-    author_email='i@xlzd.me',
+    author='xlzd, rabitdash',
+    author_email='i@xlzd.me, rabitdash@outlook.com',
     classifiers=[
         'Environment :: Console',
         'Programming Language :: Python',

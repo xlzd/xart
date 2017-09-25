@@ -11,7 +11,7 @@ from xart import errors
 from xart.font import Font
 from xart.renderer import Renderer, Color
 
-__version__ = '0.2.0'
+__version__ = '0.1.0'
 
 
 def _print_version():
